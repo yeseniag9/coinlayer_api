@@ -1,0 +1,16 @@
+body, html {
+    height: 100%;
+}
+  
+.bg { 
+    background-image: url("images/money.jpeg");
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
