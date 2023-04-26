@@ -3,22 +3,21 @@
  */
 
 async function clickedEvent(rate_info) {
-    let rate = document.getElementsByTagName('figure')[rate_info].attributes[0].value
-    console.log(rate)
+    let rate = document.getElementsByTagName('figure')[rate_info].attributes[0].value;
+    console.log(rate);
 
-    const request = await fetch(`http://api.coinlayer.com/live?access_key=535096bebcd47961fae5647b1b0b4f0d&symbols=AIR,DRZ,INK,OK,YEE`);
+    const request = await fetch(`http://api.coinlayer.com/live?access_key=f6690e79ed5d13f0a5ccc89dca412f5a&symbols=AIR,DRZ,INK,OK,YEE`);
 
     let response = await request.json();
 
     // console.log(response)
 
-    while (true) {
-        for (i in response["rates"]) {
-            if (i == rate) {
-                console.log(response["rates"][i])
-            }
+    for (i in response["rates"]) {
+        if (i == rate) {
+            console.log(response["rates"][i]);
+            break;
         }
-    } 
+    }
 } 
 
 /**
